@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Daniel's Hangman Game </title>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script type="text/javascript" src="assets/javascript/game.js">
+
+    ///look up rps4///
+
+  function setup(){
+
+
+    var wins = 0;
+    var losses = 0;
+    var lives=0;
+
+    var words = ["GERMANY", "PORTUGAL", "SPAIN", "BRAZIL", "PERU", "COLOMBIA", "FRANCE", "ICELAND", "ENGLAND", "RUSSIA"]
+    var messages = {
+      win: 'You Win!',
+      lose: 'Game Over!',
+
+    };
+
+      }
+
+
+    //set game: choose word, display underscores
+
+    //when user makes guess: see if letter exists in word
+
+    //make array of _ 
+
+
+    document.onclick = function getword() {
+
+        var word = words[Math.floor(Math.random() * words.length)];
+        console.log(word)
+
+
+        wordArray = []
+
+        function guessFunction(event) {
+          var guess1= "event.onkeyup";
+          console.log(guess1)
+
+          for (var i = 0; i < word.length; i++) {
+
+            wordArray[i] = "_";
+
+            document.getElementById("guessWord").innerHTML = wordArray;
+
+            while (remainingLetters > 0) {
+
+
+
+            }
+
+
+                }
+            }
+
+
+
+        }
+
+        
+
+
+
+
+
+        //Need to create black spaces for word//
+
+
+
+        //result= function(){    
+        //   for (var i = 0; i < word.length;  i++) {
+
+        //    }
+
+    
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">Hangman: World Cup Edition</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-center"> What countries qualified for the 2018 FIFA World Cup in Russia?</h3>
+            </div>
+        </div>
+    </div>
+    <div class="contaier-fluid">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 well border border-dark" id="hangMan">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h3> Please Click To Get Started!</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="container-fluid text-center" id="hangmanBox">
+                        <p id=guessWord></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">Wins:</div>
+                    <div class="col-md-4">Losses:</div>
+                </div>
+            </div>
+        </div>
+        <!-- jQuery CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Bootstrap JavaScript CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
