@@ -8,83 +8,9 @@
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script type="text/javascript" src="assets/javascript/game.js">
-
-    ///look up rps4///
-
-  function setup(){
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 
 
-    var wins = 0;
-    var losses = 0;
-    var lives=0;
-
-    var words = ["GERMANY", "PORTUGAL", "SPAIN", "BRAZIL", "PERU", "COLOMBIA", "FRANCE", "ICELAND", "ENGLAND", "RUSSIA"]
-    var messages = {
-      win: 'You Win!',
-      lose: 'Game Over!',
-
-    };
-
-      }
-
-
-    //set game: choose word, display underscores
-
-    //when user makes guess: see if letter exists in word
-
-    //make array of _ 
-
-
-    document.onclick = function getword() {
-
-        var word = words[Math.floor(Math.random() * words.length)];
-        console.log(word)
-
-
-        wordArray = []
-
-        function guessFunction(event) {
-          var guess1= "event.onkeyup";
-          console.log(guess1)
-
-          for (var i = 0; i < word.length; i++) {
-
-            wordArray[i] = "_";
-
-            document.getElementById("guessWord").innerHTML = wordArray;
-
-            while (remainingLetters > 0) {
-
-
-
-            }
-
-
-                }
-            }
-
-
-
-        }
-
-        
-
-
-
-
-
-        //Need to create black spaces for word//
-
-
-
-        //result= function(){    
-        //   for (var i = 0; i < word.length;  i++) {
-
-        //    }
-
-    
-    </script>
 </head>
 
 <body>
@@ -107,6 +33,9 @@
                     <div class="col-md-12 text-center">
                         <h3> Please Click To Get Started!</h3>
                     </div>
+                    <div class="row">
+                    <div class=" col-md-12 text-center underscores">_</div>
+                </div>
                 </div>
                 <div class="row">
                     <div class="container-fluid text-center" id="hangmanBox">
@@ -116,6 +45,8 @@
                 <div class="row">
                     <div class="col-md-4">Wins:</div>
                     <div class="col-md-4">Losses:</div>
+                    <div class='col-md-4 rightGuess'>Right Letters:</div>   
+                    <div class="col-md-4 wrongGuess">Wrong Letters: </div>
                 </div>
             </div>
         </div>
