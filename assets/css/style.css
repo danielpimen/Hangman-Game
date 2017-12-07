@@ -1,3 +1,31 @@
 .container-fluid {color: black;}
-body{background-color: #E6E6FA}
-	.border{border: 2rem solid black;}
+body{background-color:blue;
+	background-repeat: repeat-x ;}
+	.border{border: 1rem solid #B22222;}
+h1 , h3 {
+
+	font-family: 'Catamaran', sans-serif;
+}	
+
+.header {background-color:white;
+			height:10rem;}
+.footer{ background-color: red;
+		height:10rem; }
+#zidane {
+			height:20rem;
+			width:20rem;
+			margin:auto;
+
+}
+#pele {
+			height:20rem;
+			width:20rem;
+}
+
+#maradona{height:20rem;
+			width:20rem;
+
+}
+
+
+button{margin-left:5rem;}
