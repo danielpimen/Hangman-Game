@@ -49,17 +49,22 @@ function reSet() {
     $('.underscores').empty();
     
     console.log(guessWord);
-     }
+    console.log(array);
+    startGame(this);
+    
+  }
+     
 
 
 
 
 //Create underscores based on length
-let usLength = () => {
+let usLength = function startGame() {
     for (var i = 0; i < guessWord.length; i++) {
         array.push(' _ ');
     }
     return array;
+
 }
 console.log(usLength());
 document.getElementsByClassName('underscores').innerHTML = usLength;
@@ -96,6 +101,8 @@ document.addEventListener('keypress', (event) => {
     }
 
 });
+
+
 //array[0].innerHTML=usLength().join(' ');
 
 
