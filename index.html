@@ -8,14 +8,13 @@
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:800" rel="stylesheet">
     <script type="text/javascript" src="assets/javascript/game.js"></script>
-
-
 </head>
 
 <body>
     <div class="container-fluid">
-        <div class="row">
+        <div class="row header">
             <div class="col-md-12">
                 <h1 class="text-center">Hangman: World Cup Edition</h1>
             </div>
@@ -30,12 +29,12 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 well border border-dark" id="hangMan">
                 <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h3> Please Click To Get Started!</h3>
-                    </div>
+                   <div class="col-md-12 text-center">
+                        <h3> Guess a letter</h3>
+                    </div> 
                     <div class="row">
-                    <div class=" col-md-12 text-center underscores">_</div>
-                </div>
+                        <div class=" col-md-12 text-center underscores">_</div>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="container-fluid text-center" id="hangmanBox">
@@ -43,17 +42,42 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">Wins:</div>
-                    <div class="col-md-4">Losses:</div>
-                    <div class='col-md-4 rightGuess'>Right Letters:</div>   
+                    <div class="col-md-4 wins">Wins:</div>
+                    <div class='col-md-4 rightGuess'>Right Letters:</div>
                     <div class="col-md-4 wrongGuess">Wrong Letters: </div>
                 </div>
             </div>
+            
+            <div class="col-md-8 col-md-offset-2 well border border-dark" id="trivia">
+            <div class="row">
+                   <div class="col-md-12 text-center">
+                        <h3> Who is that World Cup Hero? </h3>
+                    </div>
+                 <div class="row">
+                    <div class="col-md-4 col-sm-12"><img src="https://www.101greatgoals.com/wp-content/uploads/2015/10/zidane-world-cup.jpg" id="zidane">
+                    <button type="button" class="btn btn-default" onclick="myFunction3()">Find Out</button>
+                    </div>
+                    <div class="col-md-4 col-sm-12"><img src="https://statics.sportskeeda.com/wp-content/uploads/2016/03/pele-1970-1457113575-800.jpg" id="pele">
+                    <button type="button" class="btn btn-default" onclick="myFunction2()">Find Out</button></div>
+
+                    <div class="col-md-4 col-sm-12"><img src="https://i.ytimg.com/vi/oS1XhH4dt1E/hqdefault.jpg" id="maradona">
+                    <button type="button" class="btn btn-default" onclick="myFunction()"">Find Out</button>
+                    </div>
+                 </div>    
+                </div>
+
+            </div>
+        <div class="row">
+            <div class="col-md-12 footer">
+            </div>
         </div>
-        <!-- jQuery CDN -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <!-- Bootstrap JavaScript CDN -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </div>
+    
+
+            <!-- jQuery CDN -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <!-- Bootstrap JavaScript CDN -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 
 </html>
