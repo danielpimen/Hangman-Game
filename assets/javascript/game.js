@@ -11,55 +11,57 @@ let wins = 0;
 let docArray = document.getElementsByClassName('underscores');
 let docRightGuess = document.getElementsByClassName('rightGuess');
 let docWrongGuess = document.getElementsByClassName('wrongGuess');
-guessWord=words[randNum];
-console.log(guessWord);
+//guessWord=words[randNum];
+//console.log(guessWord);
 let array = [];
 let audio = new Audio('assets/images/song.mp3');
 
-function myFunction(){
-  document.getElementById("maradona").innerHTML=console.log("Diego Maradona");
-  alert("Diego Maradona");
+function myFunction() {
+    document.getElementById("maradona").innerHTML = console.log("Diego Maradona");
+    alert("Diego Maradona");
 }
 
-function myFunction2(){
-  document.getElementById("pele").innerHTML=console.log("Pele");
-  alert("Pele");
+function myFunction2() {
+    document.getElementById("pele").innerHTML = console.log("Pele");
+    alert("Pele");
 }
 
-function myFunction3(){
-  document.getElementById("zidane").innerHTML=console.log("Zinedine Zidane");
-  alert("Zinedine Zidane");
+function myFunction3() {
+    document.getElementById("zidane").innerHTML = console.log("Zinedine Zidane");
+    alert("Zinedine Zidane");
 }
 
 
 
 //Reset
-function reSet() {
-    docArray=[];
-    array=0;
-    guessWord=null;
-    guessWord=words[randNum];
+function reset() {
+    docArray = [];
+    //array = 0;
+
+    guessWord = words[randNum];
     console.log(guessWord);
-    rightWord=0;
-    wrongWord=0;
+    rightWord = 0;
+    wrongWord = 0;
     $('.rightGuess').empty();
     $('.rightGuess').text('Right Letters: ');
     $('.wrongGuess').text('Wrong Letters: ');
     audio.play();
     $('.underscores').empty();
-    
-    console.log(guessWord);
+
+    //console.log(guessWord);
     console.log(array);
-    startGame(this);
-    
-  }
-     
+    usLength();
+
+}
+
 
 
 
 
 //Create underscores based on length
 let usLength = function startGame() {
+    guessWord = words[randNum];
+    console.log(guessWord);
     for (var i = 0; i < guessWord.length; i++) {
         array.push(' _ ');
     }
@@ -73,6 +75,7 @@ document.getElementsByClassName('underscores').innerHTML = usLength;
 document.addEventListener('keypress', (event) => {
     let keyWord = String.fromCharCode(event.keyCode);
     console.log(keyWord);
+
     if (guessWord.indexOf(keyWord) > -1) {
         rightWord.push(keyWord);
         docArray[0].innerHTML = array.join('');
@@ -85,10 +88,10 @@ document.addEventListener('keypress', (event) => {
             //goal score mp3
             var playAgain = confirm('Play Again?');
             if (playAgain) {
-                reSet();
+                reset();
             } else {
                 alert('You suck');
-                
+
 
             }
 
